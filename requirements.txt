@@ -1,10 +1,10 @@
 # PyTorch index must be first
 --index-url https://download.pytorch.org/whl/cpu
 
-# PyTorch packages (specific versions to avoid compatibility issues)
-torch==1.12.1
-torchvision==0.13.1
-torchaudio==0.12.1
+# PyTorch packages (compatible versions available in CPU repository)
+torch==1.13.1+cpu
+torchvision==0.14.1+cpu
+torchaudio==0.13.1+cpu
 
 # Core FastAPI and server
 fastapi==0.104.1

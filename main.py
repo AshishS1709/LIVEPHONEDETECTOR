@@ -16,6 +16,10 @@ from typing import List, Dict, Any
 import logging
 import os
 from pathlib import Path
+import os
+
+
+os.environ['TORCH_SERIALIZATION_ALLOW_UNSAFE_WEIGHTS'] = '1'
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
