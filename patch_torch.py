@@ -20,7 +20,7 @@ def patch_torch_load():
     if major >= 2 and minor >= 6:
         # Try to use add_safe_globals if available
         if hasattr(torch.serialization, 'add_safe_globals'):
-            torch.serialization.add_safe_globals([
+            torch.serialization.add_safe_globals([ # type: ignore
                 'ultralytics.nn.tasks.DetectionModel',
                 'ultralytics.models.yolo.detect.DetectionPredictor',
                 'ultralytics.models.yolo.detect.DetectionValidator', 

@@ -190,7 +190,7 @@ async def get_stats():
 
 @app.post("/detect")
 async def detect_phone_in_image(file: UploadFile = File(...)):
-    if not file.content_type.startswith('image/'):
+    if not file.content_type.startswith('image/'): # type: ignore
         raise HTTPException(status_code=400, detail="File must be an image")
     contents = await file.read()
     nparr = np.frombuffer(contents, np.uint8)

@@ -7,7 +7,7 @@ Run this before importing any YOLO models
 import torch.serialization
 
 # Add safe globals for ultralytics before any model loading occurs
-torch.serialization.add_safe_globals([
+torch.serialization.add_safe_globals([ # type: ignore
     'ultralytics.nn.tasks.DetectionModel',
     'ultralytics.models.yolo.detect.DetectionPredictor', 
     'ultralytics.models.yolo.detect.DetectionValidator',
