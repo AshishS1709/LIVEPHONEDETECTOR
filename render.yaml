@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: phone-detection-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: PORT
+        value: 8000
+    scaling:
+      minInstances: 1
+      maxInstances: 3
