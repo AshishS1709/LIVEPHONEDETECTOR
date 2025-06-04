@@ -1,3 +1,6 @@
+# CRITICAL: Import torch patch FIRST before any other imports
+import patch_torch  # This must be the first import
+
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
