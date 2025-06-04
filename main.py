@@ -13,6 +13,11 @@ from typing import List, Dict, Any, Optional
 import logging
 import os
 from pathlib import Path
+from ultralytics import YOLO
+import torch
+from ultralytics.nn.tasks import DetectionModel
+
+model = YOLO("best.pt")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
